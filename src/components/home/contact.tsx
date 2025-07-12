@@ -10,8 +10,8 @@ export default function ContactSection() {
           <div className="bg-kawaii-pink h-1 w-20"></div>
 
           <p className="mt-2 max-w-lg text-center">
-            Have a project in mind or want to chat about coding? Send me a message and let's create
-            something amazing together!
+            Have a project in mind or want to chat about coding? Send me a message and let&apos;s
+            create something amazing together!
           </p>
         </div>
 

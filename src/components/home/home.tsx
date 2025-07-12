@@ -11,7 +11,7 @@ export default function HomeSection() {
           FullStack Developer
         </h2>
         <h1 className="mb-6 text-4xl font-bold">
-          Hi, I'm <br />
+          Hi, I&apos;m <br />
           <span className="bg-gradient-to-r from-pink-300 to-pink-400 bg-clip-text text-transparent">
             Amulya
           </span>

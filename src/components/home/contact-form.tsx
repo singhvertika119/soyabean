@@ -18,7 +18,9 @@ export default function ContactForm() {
     },
   });
 
-  const onSubmit = async (data: ContactData) => {};
+  const onSubmit = async (data: ContactData) => {
+    console.log(data);
+  };
 
   return (
     <div>

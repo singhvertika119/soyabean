@@ -20,7 +20,7 @@ interface FormInputProps {
   itemLabel?: string;
   placeholder?: string;
   info?: string;
-  onInputChange?: (...event: any) => void;
+  onInputChange?: (value: string) => void;
   description?: React.ReactNode | string;
   isAsterisk?: boolean;
   className?: string;
@@ -62,7 +62,9 @@ const FormInput: React.FC<FormInputProps> = memo(
               {label && (
                 <FormLabel htmlFor={name}>
                   <div className="flex flex-row items-center">
-                    <p className="mr-[4px] text-base text-neutral-700">{label}</p>
+                    <p className="text-small mr-[4px] font-medium">
+                      {label} {isAsterisk && <span className="text-red-500">*</span>}
+                    </p>
                     {info && (
                       <div className="flex rounded-full bg-neutral-700 p-0 text-white">
                         <InfoTooltip info={info} />
@@ -80,12 +82,12 @@ const FormInput: React.FC<FormInputProps> = memo(
                     {...field}
                     {...rest}
                     value={value}
-                    onChange={(e: any) => {
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                       onChange(e);
                       onInputChange(e.target.value);
                     }}
                     disabled={disabled}
-                    className={`${className} placeholder:text-muted-foreground bg-kawaii-input border-kawaii-pink focus-visible:border-kawaii-pink h-12 rounded-xl tracking-wider transition-all duration-200 focus-visible:ring-2 focus-visible:ring-pink-300 focus-visible:outline-none`}
+                    className={`${className} placeholder:text-gray-light bg-kawaii-input border-kawaii-pink h-12 rounded-xl tracking-wider !focus-visible:ring-2 !focus-visible:ring-kawaii-pink !focus-visible:ring-opacity-50 !focus-visible:border-kawaii-pink focus-visible:outline-none transition-all duration-200`}
                   />
 
                   {enableCopyText && (
