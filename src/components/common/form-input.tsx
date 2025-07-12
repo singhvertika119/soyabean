@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 import { Copy, AlertCircle } from 'lucide-react';
 import React, { memo } from 'react';
