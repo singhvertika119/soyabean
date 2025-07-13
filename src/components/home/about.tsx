@@ -4,7 +4,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="from-kawaii-mint/30 to-kawaii-lavender/30 min-h-screen bg-gradient-to-br pt-30"
+      className="from-kawaii-mint/30 to-kawaii-lavender/30 min-h-screen bg-gradient-to-br pt-30 pb-20"
     >
       <Wrapper>
         <div className="flex flex-col items-center gap-4">
@@ -12,7 +12,7 @@ export default function AboutSection() {
           <div className="bg-kawaii-pink h-1 w-20"></div>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 items-center gap-4">
+        <div className="mt-20 grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-4">
           <div className="flex flex-col gap-10">
             <div>
               <h2 className="text-lg font-semibold">Full Stack Developer</h2>
@@ -45,7 +45,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="mx-auto w-sm">
+          <div className="order-first mx-auto w-full sm:w-sm md:order-last">
             <div className="border-kawaii-pink rounded-3xl border-3 p-6 shadow-sm transition-transform duration-300 hover:scale-105 hover:rotate-6">
               <div className="bg-kawaii-mint mb-8 h-80 w-full rounded-3xl"></div>
 

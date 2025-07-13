@@ -5,27 +5,30 @@ import { Button } from '@/components/ui/button';
 
 export default function HomeSection() {
   return (
-    <section id="home" className="flex min-h-[92vh] items-center justify-between">
+    <section
+      id="home"
+      className="mt-10 grid min-h-[80vh] grid-cols-1 items-center justify-center sm:mt-0 sm:min-h-[91vh] md:grid-cols-2"
+    >
       <div className="max-w-lg">
-        <h2 className="bg-kawaii-lavender mb-4 w-fit rounded-full px-4 py-3 text-sm font-medium">
-          FullStack Developer
+        <h2 className="bg-kawaii-lavender mx-auto mb-4 w-fit rounded-full px-6 py-3 text-sm font-medium sm:mx-0">
+          Full Stack Developer
         </h2>
-        <h1 className="mb-6 text-4xl font-bold">
+        <h1 className="mb-6 text-center text-4xl font-bold sm:text-left">
           Hi, I&apos;m <br />
-          <span className="bg-gradient-to-r from-pink-300 to-pink-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-pink-300 to-pink-400 bg-clip-text text-6xl text-transparent sm:text-4xl">
             Amulya
           </span>
         </h1>
-        <p className="text-lg">
+        <p className="text-center text-lg sm:text-left">
           Welcome to my world where coding meets creativity ౨ৎ˚₊✩‧₊ I combine technical expertise
           with creativity to craft functional, imaginative solutions!
         </p>
-        <div className="mt-8 flex gap-4">
-          <Button className="bg-kawaii-pink hover:bg-kawaii-pink/80 w-44 rounded-full py-6 text-base font-semibold text-black transition-all duration-300 hover:shadow-sm">
+        <div className="mt-8 flex justify-center gap-4 sm:justify-start">
+          <Button className="bg-kawaii-pink hover:bg-kawaii-pink/80 w-40 rounded-full py-5 text-sm font-semibold text-black transition-all duration-300 hover:shadow-sm sm:w-44 sm:text-base">
             See My Work
             <KawaiiHeart className="text-black" />
           </Button>
-          <Button className="bg-kawaii-mint hover:bg-kawaii-mint/80 w-44 rounded-full py-6 text-base font-semibold text-black transition-all duration-300 hover:shadow-sm">
+          <Button className="bg-kawaii-mint hover:bg-kawaii-mint/80 w-40 rounded-full py-5 text-sm font-semibold text-black transition-all duration-300 hover:shadow-sm sm:w-44 sm:text-base">
             Contact Me
             <KawaiiLeaf className="text-black" />
           </Button>
@@ -34,17 +37,17 @@ export default function HomeSection() {
 
       {/* Images */}
       <div className="border-kawaii-pink from-kawaii-pink via-kawaii-mint to-kawaii-blue flex gap-4 rounded-3xl border-2 bg-gradient-to-br p-1 shadow-xl">
-        <div className="flex h-full w-full gap-4 rounded-2xl bg-white px-10 py-20">
+        <div className="flex h-full w-full justify-center gap-4 rounded-2xl bg-white px-4 py-6 sm:px-10 sm:py-20">
           <CaptionImage
             src="/images/beabadoobee.jpeg"
             caption="Beabadoobee"
-            className="w-60"
+            className="h-40 w-60 sm:h-full"
             captionClassName="bg-kawaii-lavender/70"
           />
           <CaptionImage
             src="/images/beabadoobee.jpeg"
             caption="Oikawa"
-            className="w-60"
+            className="h-40 w-60 sm:h-full"
             captionClassName="bg-kawaii-pink/70"
           />
         </div>

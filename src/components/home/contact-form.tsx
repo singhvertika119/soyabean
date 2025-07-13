@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import Link from 'next/link';
 import { Spinner } from '../common/spinner';
 import { ContactData, contactSchema } from '@/lib/validation';
+import { MailIcon } from 'lucide-react';
 
 export default function ContactForm() {
   const form = useForm<ContactData>({
@@ -25,7 +26,7 @@ export default function ContactForm() {
   return (
     <div>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="mx-auto min-w-sm space-y-8">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="mx-auto space-y-8">
           <FormInput name="name" label="Your Name" type="text" placeholder="John Doe" isAsterisk />
           <FormInput
             name="email"
@@ -54,11 +55,17 @@ export default function ContactForm() {
             )}
           </Button>
 
-          <div className="text-center text-sm">
-            New to this platform?{'  '}
-            <Link href="/signup" className="font-medium text-blue-600 underline underline-offset-4">
-              Sign Up here.
-            </Link>
+          <div className="flex flex-col items-center justify-center gap-0 text-center text-sm sm:flex-row sm:gap-2">
+            <MailIcon className="text-kawaii-pink inline-block size-7 animate-bounce sm:size-5" />
+            <div>
+              Or send me an email at{' '}
+              <Link
+                href="mailto:amulya.kumar@gmail.com"
+                className="font-medium underline underline-offset-4"
+              >
+                amulya.kumar@gmail.com
+              </Link>
+            </div>
           </div>
         </form>
       </Form>

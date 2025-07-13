@@ -8,7 +8,6 @@ import AnimatedLink from '../common/animated-link';
 import { KawaiiHeart } from '../../../public/icons/kawaii-heart';
 import { headerLinks } from '@/constants';
 import { Button } from '@/components/ui/button';
-import { randomColorGenerator } from '@/lib/utils';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

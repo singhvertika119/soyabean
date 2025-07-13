@@ -14,7 +14,7 @@ export default function ProjectsSection() {
         </p>
       </div>
 
-      <div className="mx-28 mt-20 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
+      <div className="mx-auto mt-20 grid w-fit grid-cols-1 gap-6 md:grid-cols-2 lg:mx-28 lg:grid-cols-2">
         {projects.map((project) => (
           <ProjectsCard
             key={project.id}
