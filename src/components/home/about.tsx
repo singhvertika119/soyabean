@@ -8,7 +8,7 @@ export default function AboutSection() {
     >
       <Wrapper>
         <div className="flex flex-col items-center gap-4">
-          <h1 className="text-center text-xl font-semibold">About Amulya</h1>
+          <h1 className="font-family-bubblegum text-center text-4xl font-semibold">About Amulya</h1>
           <div className="bg-kawaii-pink h-1 w-20"></div>
         </div>
 

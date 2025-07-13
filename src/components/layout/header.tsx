@@ -16,7 +16,7 @@ export default function Header() {
     <>
       <header className="border-kawaii-pink sticky top-0 z-50 border-b-2 bg-white/90 backdrop-blur-md dark:bg-black/90">
         <Wrapper className="flex justify-between py-4">
-          <Link href="/" className="group flex items-center gap-2">
+          <Link href="/" className="group font-family-bubblegum flex items-center gap-2">
             <KawaiiHeart
               fillColor="pink"
               className="text-pink-300 transition-transform group-hover:scale-110"

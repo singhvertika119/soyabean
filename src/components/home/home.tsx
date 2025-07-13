@@ -7,15 +7,15 @@ export default function HomeSection() {
   return (
     <section
       id="home"
-      className="mt-10 grid min-h-[80vh] grid-cols-1 items-center justify-center sm:mt-0 sm:min-h-[91vh] md:grid-cols-2"
+      className="mt-10 grid min-h-[80vh] grid-cols-1 items-center justify-center gap-4 sm:mt-0 sm:min-h-[91vh] md:grid-cols-2"
     >
       <div className="max-w-lg">
         <h2 className="bg-kawaii-lavender mx-auto mb-4 w-fit rounded-full px-6 py-3 text-sm font-medium sm:mx-0">
           Full Stack Developer
         </h2>
-        <h1 className="mb-6 text-center text-4xl font-bold sm:text-left">
+        <h1 className="font-family-bubblegum mb-6 text-center text-6xl font-bold sm:text-left">
           Hi, I&apos;m <br />
-          <span className="bg-gradient-to-r from-pink-300 to-pink-400 bg-clip-text text-6xl text-transparent sm:text-4xl">
+          <span className="bg-gradient-to-r from-pink-300 to-pink-400 bg-clip-text text-6xl text-transparent sm:text-6xl">
             Amulya
           </span>
         </h1>

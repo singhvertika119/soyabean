@@ -5,7 +5,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-20">
       <div className="flex flex-col items-center gap-4">
-        <h1 className="text-center text-xl font-semibold">Projects</h1>
+        <h1 className="font-family-bubblegum text-center text-4xl font-semibold">Projects</h1>
         <div className="bg-kawaii-pink h-1 w-20"></div>
 
         <p className="mt-2 max-w-lg text-center">

@@ -46,6 +46,11 @@
   --color-kawaii-blue: rgb(211 228 253);
   --color-kawaii-input: rgb(255, 245, 250);
   --color-kawaii-footer: rgb(254, 246, 249);
+
+  /* Add font family configuration */
+  --font-family-quicksand: var(--font-quicksand), ui-sans-serif, system-ui, sans-serif;
+  --font-family-lacquer: var(--font-lacquer), ui-sans-serif, system-ui, sans-serif;
+  --font-family-bubblegum: var(--font-bubblegum-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
