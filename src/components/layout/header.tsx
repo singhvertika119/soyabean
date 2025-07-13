@@ -21,7 +21,7 @@ export default function Header() {
               fillColor="pink"
               className="text-pink-300 transition-transform group-hover:scale-110"
             />
-            <h1 className="text-lg font-semibold text-neutral-800">Pringles Portfolio</h1>
+            <h1 className="text-xl font-semibold text-neutral-800">Vertika&apos;s Portfolio</h1>
           </Link>
 
           {/* Desktop Navigation */}

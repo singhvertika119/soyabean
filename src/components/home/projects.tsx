@@ -9,8 +9,8 @@ export default function ProjectsSection() {
         <div className="bg-kawaii-pink h-1 w-20"></div>
 
         <p className="mt-2 max-w-lg text-center">
-          Check out my current development projects! As a full stack developer, I love combining
-          cute aesthetics with powerful functionality
+          Check out my current development projects! As a machine learning engineer, I love
+          combining cute aesthetics with powerful functionality
         </p>
       </div>
 

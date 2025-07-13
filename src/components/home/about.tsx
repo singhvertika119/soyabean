@@ -8,17 +8,19 @@ export default function AboutSection() {
     >
       <Wrapper>
         <div className="flex flex-col items-center gap-4">
-          <h1 className="font-family-bubblegum text-center text-4xl font-semibold">About Amulya</h1>
+          <h1 className="font-family-bubblegum text-center text-4xl font-semibold">
+            About Vertika
+          </h1>
           <div className="bg-kawaii-pink h-1 w-20"></div>
         </div>
 
         <div className="mt-20 grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-4">
           <div className="flex flex-col gap-10">
             <div>
-              <h2 className="text-lg font-semibold">Full Stack Developer</h2>
+              <h2 className="text-lg font-semibold">Machine Learning Engineer</h2>
               <p>
-                I am a full stack developer with a passion for building web applications. I am a
-                quick learner and I am always looking to expand my knowledge.
+                I am a machine learning engineer with a passion for building machine learning
+                models. I am a quick learner and I am always looking to expand my knowledge.
               </p>
             </div>
 

@@ -16,7 +16,7 @@ export default function HomeSection() {
         <h1 className="font-family-bubblegum mb-6 text-center text-6xl font-bold sm:text-left">
           Hi, I&apos;m <br />
           <span className="bg-gradient-to-r from-pink-300 to-pink-400 bg-clip-text text-6xl text-transparent sm:text-6xl">
-            Amulya
+            Vertika
           </span>
         </h1>
         <p className="text-center text-lg sm:text-left">

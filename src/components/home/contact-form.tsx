@@ -27,12 +27,12 @@ export default function ContactForm() {
     <div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="mx-auto space-y-8">
-          <FormInput name="name" label="Your Name" type="text" placeholder="John Doe" isAsterisk />
+          <FormInput name="name" label="Your Name" type="text" placeholder="Hoover" isAsterisk />
           <FormInput
             name="email"
             label="Your Email"
             type="text"
-            placeholder="john@doe.com"
+            placeholder="hoover@gmail.com"
             isAsterisk
           />
           <FormInput
@@ -60,10 +60,10 @@ export default function ContactForm() {
             <div>
               Or send me an email at{' '}
               <Link
-                href="mailto:amulya.kumar@gmail.com"
+                href="mailto:singhvertika119@gmail.com"
                 className="font-medium underline underline-offset-4"
               >
-                amulya.kumar@gmail.com
+                singhvertika119@gmail.com
               </Link>
             </div>
           </div>
