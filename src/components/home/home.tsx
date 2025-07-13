@@ -1,7 +1,7 @@
 import { KawaiiHeart } from '../../../public/icons/kawaii-heart';
 import { KawaiiLeaf } from '../../../public/icons/kawaii-leaf';
-import CaptionImage from '../common/caption-image';
-import { Button } from '../ui/button';
+import CaptionImage from '@/components/common/caption-image';
+import { Button } from '@/components/ui/button';
 
 export default function HomeSection() {
   return (

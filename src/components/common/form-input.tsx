@@ -88,7 +88,7 @@ const FormInput: React.FC<FormInputProps> = memo(
                       onInputChange(e.target.value);
                     }}
                     disabled={disabled}
-                    className={`${className} placeholder:text-gray-light bg-kawaii-input border-kawaii-pink h-12 rounded-xl tracking-wider !focus-visible:ring-2 !focus-visible:ring-kawaii-pink !focus-visible:ring-opacity-50 !focus-visible:border-kawaii-pink focus-visible:outline-none transition-all duration-200`}
+                    className={`${className} placeholder:text-gray-light bg-kawaii-input border-kawaii-pink !focus-visible:ring-2 !focus-visible:ring-kawaii-pink !focus-visible:ring-opacity-50 !focus-visible:border-kawaii-pink h-12 rounded-xl tracking-wider transition-all duration-200 focus-visible:outline-none`}
                   />
 
                   {enableCopyText && (

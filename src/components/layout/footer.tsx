@@ -10,7 +10,8 @@ export default function Footer() {
       <Wrapper>
         <div className="mb-10 space-y-4">
           <h1 className="font-semibold">
-            Made with <KawaiiHeart className="text-kawaii-pink inline-block" /> by Pringles
+            Made with <KawaiiHeart fillColor="pink" className="inline-block text-pink-300" /> by
+            Pringles
           </h1>
 
           <div className="flex items-center justify-center gap-4 text-sm">
