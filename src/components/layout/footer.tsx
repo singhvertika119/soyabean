@@ -3,7 +3,6 @@ import { KawaiiHeart } from '../../../public/icons/kawaii-heart';
 import { headerLinks } from '@/constants';
 import Link from 'next/link';
 import { GithubIcon, TwitterIcon } from 'lucide-react';
-import { ThemeToggle } from '../common/theme-toggle';
 
 export default function Footer() {
   return (
@@ -36,8 +35,6 @@ export default function Footer() {
           <p className="text-muted-foreground text-sm">
             © 2025 Vertika Singh. All rights reserved.
           </p>
-
-          <ThemeToggle />
         </div>
       </Wrapper>
     </footer>

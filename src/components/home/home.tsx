@@ -3,7 +3,7 @@ import { KawaiiHeart } from '../../../public/icons/kawaii-heart';
 import { KawaiiLeaf } from '../../../public/icons/kawaii-leaf';
 import CaptionImage from '@/components/common/caption-image';
 import { Button } from '@/components/ui/button';
-import { MusicIcon, Star } from 'lucide-react';
+import { MusicIcon, Star, StarIcon } from 'lucide-react';
 
 export default function HomeSection() {
   return (
@@ -13,7 +13,7 @@ export default function HomeSection() {
     >
       <div className="max-w-lg">
         <h2 className="bg-kawaii-lavender mx-auto mb-4 w-fit rounded-full px-6 py-3 text-sm font-medium sm:mx-0 dark:text-neutral-800">
-          Full Stack Developer
+          Machine Learning Engineer
         </h2>
         <h1 className="font-family-bubblegum mb-6 text-center text-6xl font-bold sm:text-left">
           Hi, I&apos;m <br />
@@ -22,8 +22,8 @@ export default function HomeSection() {
           </span>
         </h1>
         <p className="text-center text-lg sm:text-left">
-          Welcome to my world where coding meets creativity ౨ৎ˚₊✩‧₊ I combine technical expertise
-          with creativity to craft functional, imaginative solutions!
+          Mostly just curious about everything. I like building things, talking about ideas, and
+          keeping things simple.
         </p>
         <div className="mt-8 flex justify-center gap-4 sm:justify-start">
           <Link href="#projects">
@@ -42,27 +42,36 @@ export default function HomeSection() {
       </div>
 
       {/* Images */}
-      <div className="border-kawaii-pink from-kawaii-pink via-kawaii-mint to-kawaii-blue flex gap-4 rounded-3xl border-2 bg-gradient-to-br p-1 shadow-xl">
+      <div className="border-kawaii-pink from-kawaii-pink via-kawaii-mint to-kawaii-blue relative flex gap-4 rounded-3xl border-2 bg-gradient-to-br p-1 shadow-xl">
         <div className="flex h-full w-full justify-center gap-4 rounded-2xl bg-white px-4 py-6 sm:px-10 sm:py-12">
           <div className="space-y-2">
             <CaptionImage
-              src="/images/beabadoobee.jpeg"
-              caption="Beabadoobee"
-              className="w-40 sm:h-full sm:w-52"
+              src="/images/muffin1.jpg"
+              caption="Muffins <3"
+              className="max-h-60 w-full sm:h-full sm:w-52"
               captionClassName="bg-kawaii-lavender/70"
             />
             <Star size={20} className="text-kawaii-mint mx-auto" />
           </div>
           <div className="space-y-2">
             <CaptionImage
-              src="/images/beabadoobee.jpeg"
-              caption="Oikawa"
-              className="w-40 sm:h-full sm:w-52"
+              src="/images/momo.jpg"
+              caption="me & momos"
+              className="max-h-60 w-full sm:h-full sm:w-52"
               captionClassName="bg-kawaii-pink/70"
             />
             <MusicIcon size={20} className="text-kawaii-pink mx-auto" />
           </div>
         </div>
+
+        <StarIcon
+          className="animate-sparkle absolute -top-3 -right-3 text-yellow-400"
+          fill="rgb(250 204 21)"
+        />
+        <StarIcon
+          className="animate-sparkle absolute -bottom-3 -left-3 text-yellow-400"
+          fill="rgb(250 204 21)"
+        />
       </div>
     </section>
   );

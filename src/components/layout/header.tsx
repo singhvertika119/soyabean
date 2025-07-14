@@ -21,7 +21,7 @@ export default function Header() {
               fillColor="pink"
               className="animate-pulse text-pink-300 transition-transform group-hover:scale-110"
             />
-            <h1 className="dark:text-kawaii-pink text-xl font-semibold text-neutral-800">
+            <h1 className="dark:text-kawaii-pink text-xl font-semibold tracking-wider text-neutral-800">
               Vertika&apos;s Portfolio
             </h1>
           </Link>

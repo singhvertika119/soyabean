@@ -1,3 +1,4 @@
+import { KawaiiHeart } from '../../../public/icons/kawaii-heart';
 import Wrapper from '../common/Wrapper';
 
 export default function AboutSection() {
@@ -17,16 +18,21 @@ export default function AboutSection() {
         <div className="mt-20 grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-4">
           <div className="flex flex-col gap-10">
             <div>
-              <h2 className="text-lg font-semibold">Machine Learning Engineer</h2>
+              <h2 className="font-family-bubblegum text-2xl font-semibold tracking-wider">
+                Machine Learning Engineer
+              </h2>
               <p>
-                I am a machine learning engineer with a passion for building machine learning
-                models. I am a quick learner and I am always looking to expand my knowledge.
+                I'm Vertika Singh— a computer science student with an eye for building clean,
+                purposeful, and thoughtfully designed tech. I find joy in unraveling the logic
+                behind algorithms and fine-tuning systems to work smarter and smoother.
               </p>
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold">Education & Skills</h2>
-              <ul className="list-disc pl-4">
+              <h2 className="font-family-bubblegum text-2xl font-semibold tracking-wider">
+                Education & Skills
+              </h2>
+              <ul className="list-disc space-y-1 pl-4">
                 <li>Third year Computer Science student</li>
                 <li>Data Structure and Algorithm in Java</li>
                 <li>
@@ -48,13 +54,14 @@ export default function AboutSection() {
           </div>
 
           <div className="order-first mx-auto w-full sm:w-sm md:order-last">
-            <div className="border-kawaii-pink rounded-3xl border-3 p-6 shadow-sm transition-transform duration-300 hover:scale-105 hover:rotate-6">
-              <div className="bg-kawaii-pink mb-8 h-80 w-full overflow-hidden rounded-3xl border-2 border-pink-200 p-2">
+            <div className="border-kawaii-pink rounded-3xl border-3 bg-white p-6 shadow-sm transition-transform duration-300 hover:scale-105 hover:rotate-6">
+              <div className="bg-kawaii-pink relative mb-8 h-80 w-full rounded-3xl border-2 border-pink-200 p-2">
                 <img
                   src="/images/about-vertika.jpg"
                   alt="about"
                   className="h-full w-full rounded-2xl object-cover"
                 />
+                <KawaiiHeart className="animate-sparkle absolute -top-2 -right-2 scale-110 text-pink-400" />
               </div>
 
               <div className="text-center">
