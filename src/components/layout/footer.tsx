@@ -11,7 +11,8 @@ export default function Footer() {
       <Wrapper>
         <div className="mb-10 space-y-4">
           <h1 className="font-semibold">
-            Made with <KawaiiHeart fillColor="pink" className="inline-block text-pink-300" /> by
+            Made with{' '}
+            <KawaiiHeart fillColor="pink" className="inline-block animate-pulse text-pink-300" /> by
             Vertika
           </h1>
 
@@ -33,7 +34,7 @@ export default function Footer() {
           </div>
 
           <p className="text-muted-foreground text-sm">
-            © 2025 Pringles Portfolio. All rights reserved.
+            © 2025 Vertika Singh. All rights reserved.
           </p>
 
           <ThemeToggle />

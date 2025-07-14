@@ -7,8 +7,8 @@ import { Analytics } from '@vercel/analytics/next';
 import { quicksand, lacquer, bubblegumSans } from '@/lib/fonts';
 
 export const metadata: Metadata = {
-  title: 'Pringles Portfolio',
-  description: 'Pringles Portfolio',
+  title: 'Vertika Singh | Portfolio',
+  description: 'Vertika Singh',
 };
 
 export default function RootLayout({

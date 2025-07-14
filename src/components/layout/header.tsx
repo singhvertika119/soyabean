@@ -19,7 +19,7 @@ export default function Header() {
           <Link href="/" className="group font-family-bubblegum flex items-center gap-2">
             <KawaiiHeart
               fillColor="pink"
-              className="text-pink-300 transition-transform group-hover:scale-110"
+              className="animate-pulse text-pink-300 transition-transform group-hover:scale-110"
             />
             <h1 className="dark:text-kawaii-pink text-xl font-semibold text-neutral-800">
               Vertika&apos;s Portfolio

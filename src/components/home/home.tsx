@@ -9,7 +9,7 @@ export default function HomeSection() {
   return (
     <section
       id="home"
-      className="mt-10 grid min-h-[80vh] grid-cols-1 items-center justify-center gap-4 sm:mt-0 sm:min-h-[91vh] md:grid-cols-2"
+      className="mt-10 grid min-h-[80vh] grid-cols-1 items-center justify-center gap-4 sm:mt-0 sm:min-h-[91vh] lg:grid-cols-2"
     >
       <div className="max-w-lg">
         <h2 className="bg-kawaii-lavender mx-auto mb-4 w-fit rounded-full px-6 py-3 text-sm font-medium sm:mx-0 dark:text-neutral-800">
@@ -48,7 +48,7 @@ export default function HomeSection() {
             <CaptionImage
               src="/images/beabadoobee.jpeg"
               caption="Beabadoobee"
-              className="h-40 w-60 sm:h-full"
+              className="w-40 sm:h-full sm:w-52"
               captionClassName="bg-kawaii-lavender/70"
             />
             <Star size={20} className="text-kawaii-mint mx-auto" />
@@ -57,7 +57,7 @@ export default function HomeSection() {
             <CaptionImage
               src="/images/beabadoobee.jpeg"
               caption="Oikawa"
-              className="h-40 w-60 sm:h-full"
+              className="w-40 sm:h-full sm:w-52"
               captionClassName="bg-kawaii-pink/70"
             />
             <MusicIcon size={20} className="text-kawaii-pink mx-auto" />
