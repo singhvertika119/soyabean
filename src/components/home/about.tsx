@@ -22,7 +22,7 @@ export default function AboutSection() {
                 Machine Learning Engineer
               </h2>
               <p>
-                I'm Vertika Singh— a computer science student with an eye for building clean,
+                I&apos;m Vertika Singh— a computer science student with an eye for building clean,
                 purposeful, and thoughtfully designed tech. I find joy in unraveling the logic
                 behind algorithms and fine-tuning systems to work smarter and smoother.
               </p>
