@@ -3,10 +3,11 @@ import { KawaiiHeart } from '../../../public/icons/kawaii-heart';
 import { headerLinks } from '@/constants';
 import Link from 'next/link';
 import { GithubIcon, TwitterIcon } from 'lucide-react';
+import { ThemeToggle } from '../common/theme-toggle';
 
 export default function Footer() {
   return (
-    <footer className="border-kawaii-pink bg-kawaii-footer border-t-2 py-8 text-center">
+    <footer className="border-kawaii-pink bg-kawaii-footer border-t-2 py-8 text-center dark:bg-neutral-900">
       <Wrapper>
         <div className="mb-10 space-y-4">
           <h1 className="font-semibold">
@@ -24,16 +25,18 @@ export default function Footer() {
 
           <div className="flex items-center justify-center gap-4">
             <Link href="https://github.com/pringles-dev">
-              <GithubIcon className="size-5 text-neutral-700" />
+              <GithubIcon className="dark:text-kawaii-pink size-5 text-neutral-700" />
             </Link>
             <Link href="https://x.com/pringles_dev">
-              <TwitterIcon className="size-5 text-neutral-700" />
+              <TwitterIcon className="dark:text-kawaii-pink size-5 text-neutral-700" />
             </Link>
           </div>
 
           <p className="text-muted-foreground text-sm">
             © 2025 Pringles Portfolio. All rights reserved.
           </p>
+
+          <ThemeToggle />
         </div>
       </Wrapper>
     </footer>

@@ -4,16 +4,24 @@ import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
+import { useState, useEffect } from 'react';
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null; // prevents SSR mismatch
 
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       className={cn(
-        'cursor-pointer rounded-lg bg-neutral-800 p-2 text-neutral-400 hover:text-neutral-200',
-        theme === 'light' && 'bg-neutral-300 text-neutral-900 hover:text-black',
+        'cursor-pointer rounded-lg border-2 bg-neutral-800 p-2 text-pink-300',
+        theme === 'light' && 'bg-kawaii-pink border-pink-200 text-pink-300 hover:text-pink-400',
       )}
       aria-label="Toggle theme"
     >

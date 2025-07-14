@@ -14,14 +14,16 @@ export default function Header() {
 
   return (
     <>
-      <header className="border-kawaii-pink sticky top-0 z-50 border-b-2 bg-white/90 backdrop-blur-md dark:bg-black/90">
+      <header className="border-kawaii-pink sticky top-0 z-50 border-b-2 bg-white/90 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-900/80">
         <Wrapper className="flex justify-between py-4">
           <Link href="/" className="group font-family-bubblegum flex items-center gap-2">
             <KawaiiHeart
               fillColor="pink"
               className="text-pink-300 transition-transform group-hover:scale-110"
             />
-            <h1 className="text-xl font-semibold text-neutral-800">Vertika&apos;s Portfolio</h1>
+            <h1 className="dark:text-kawaii-pink text-xl font-semibold text-neutral-800">
+              Vertika&apos;s Portfolio
+            </h1>
           </Link>
 
           {/* Desktop Navigation */}

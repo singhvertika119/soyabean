@@ -4,7 +4,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="from-kawaii-mint/30 to-kawaii-lavender/30 min-h-screen bg-gradient-to-br pt-30 pb-20"
+      className="from-kawaii-mint/30 to-kawaii-lavender/30 dark:to-kawaii-lavender/10 min-h-screen bg-gradient-to-br pt-30 pb-20 dark:bg-gradient-to-b dark:from-neutral-900"
     >
       <Wrapper>
         <div className="flex flex-col items-center gap-4">
@@ -49,7 +49,13 @@ export default function AboutSection() {
 
           <div className="order-first mx-auto w-full sm:w-sm md:order-last">
             <div className="border-kawaii-pink rounded-3xl border-3 p-6 shadow-sm transition-transform duration-300 hover:scale-105 hover:rotate-6">
-              <div className="bg-kawaii-mint mb-8 h-80 w-full rounded-3xl"></div>
+              <div className="bg-kawaii-pink mb-8 h-80 w-full overflow-hidden rounded-3xl border-2 border-pink-200 p-2">
+                <img
+                  src="/images/about-vertika.jpg"
+                  alt="about"
+                  className="h-full w-full rounded-2xl object-cover"
+                />
+              </div>
 
               <div className="text-center">
                 <div className="mx-auto flex w-fit items-center gap-2">

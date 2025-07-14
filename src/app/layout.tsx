@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${lacquer.variable} ${quicksand.variable} ${bubblegumSans.variable} font-family-quicksand antialiased`}
+        className={`${lacquer.variable} ${quicksand.variable} ${bubblegumSans.variable} font-family-quicksand antialiased dark:bg-neutral-900`}
       >
         <ThemeProvider
           attribute="class"
