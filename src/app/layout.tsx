@@ -7,7 +7,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { quicksand, lacquer, bubblegumSans } from '@/lib/fonts';
 
 export const metadata: Metadata = {
-  title: 'Vertika Singh | Portfolio',
+  title: 'Vertika Singh',
   description: 'Vertika Singh',
 };
 

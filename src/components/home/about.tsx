@@ -61,6 +61,8 @@ export default function AboutSection() {
             <div className="border-kawaii-pink rounded-3xl border-3 bg-white p-6 shadow-sm transition-transform duration-300 hover:scale-105 hover:rotate-6">
               <div className="bg-kawaii-pink relative mb-8 h-80 w-full rounded-3xl border-2 border-pink-200 p-2">
                 <Image
+                  width={500}
+                  height={500}
                   src="/images/about-vertika.jpg"
                   alt="about"
                   className="h-full w-full rounded-2xl object-cover"
