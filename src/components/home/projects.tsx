@@ -1,5 +1,6 @@
 import { projects } from '@/constants';
 import ProjectsCard from '@/components/common/projects-card';
+import ComingSoonCard from '../common/coming-soon-card';
 
 export default function ProjectsSection() {
   return (
@@ -27,6 +28,9 @@ export default function ProjectsSection() {
             color={project.color}
           />
         ))}
+        <div className="hidden md:block">
+          <ComingSoonCard />
+        </div>
       </div>
     </section>
   );

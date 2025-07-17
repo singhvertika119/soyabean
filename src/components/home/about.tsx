@@ -1,3 +1,4 @@
+import { CodeIcon, GraduationCapIcon } from 'lucide-react';
 import { KawaiiHeart } from '../../../public/icons/kawaii-heart';
 import Wrapper from '../common/Wrapper';
 
@@ -18,7 +19,8 @@ export default function AboutSection() {
         <div className="mt-20 grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-4">
           <div className="flex flex-col gap-10">
             <div>
-              <h2 className="font-family-bubblegum text-2xl font-semibold tracking-wider">
+              <h2 className="font-family-bubblegum flex items-center gap-2 text-2xl font-semibold tracking-wider">
+                <CodeIcon className="text-kawaii-pink" />
                 Machine Learning Engineer
               </h2>
               <p>
@@ -29,7 +31,8 @@ export default function AboutSection() {
             </div>
 
             <div>
-              <h2 className="font-family-bubblegum text-2xl font-semibold tracking-wider">
+              <h2 className="font-family-bubblegum flex items-center gap-2 text-2xl font-semibold tracking-wider">
+                <GraduationCapIcon className="text-kawaii-blue" />
                 Education & Skills
               </h2>
               <ul className="list-disc space-y-1 pl-4">

@@ -1,6 +1,7 @@
 import { cn, randomColorGenerator } from '@/lib/utils';
-import { Heart } from 'lucide-react';
+import { Github, GithubIcon, Heart } from 'lucide-react';
 import Link from 'next/link';
+import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 
 interface ProjectsCardProps {
   title: string;
@@ -58,9 +59,13 @@ export default function ProjectsCard({
         <h2 className="text-lg font-semibold">{title}</h2>
         <p>{description}</p>
 
-        <div className="absolute grid h-full w-full place-items-center gap-2 bg-neutral-900/20 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:backdrop-blur-xs">
+        <div className="group-hover:backdrop-blur-l absolute grid h-full w-full place-items-center gap-2 bg-neutral-900/40 opacity-0 transition-all duration-300 group-hover:opacity-100">
           <div className="flex translate-y-10 flex-col gap-2 transition-all duration-300 group-hover:translate-y-0">
-            <Link href={githubLink} className="mx-auto w-fit rounded-full bg-white px-6 py-2">
+            <Link
+              href={githubLink}
+              className="mx-auto flex w-fit items-center gap-1 rounded-full bg-white px-6 py-2"
+            >
+              <GithubIcon className="size-4 text-neutral-700 hover:text-neutral-900" fill="black" />
               View on GitHub
             </Link>
             {liveLink && (
@@ -79,7 +84,19 @@ export default function ProjectsCard({
               ? 'Currently Working On'
               : 'On Hold'}
         </p>
-        <h2 className="mt-1 mb-2 text-lg font-semibold">{title}</h2>
+        <div className="flex items-center justify-between">
+          <h2 className="mt-1 mb-2 text-lg font-semibold">{title}</h2>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link href={githubLink}>
+                <GithubIcon className="size-4 text-neutral-700 hover:text-neutral-900" />
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>GitHub</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
 
         <div className="flex items-center gap-1 text-xs">
           {technologies.map((technology) => (

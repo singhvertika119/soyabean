@@ -24,10 +24,10 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center justify-center gap-4">
-            <Link href="https://github.com/pringles-dev">
+            <Link href="https://github.com/singhvertika119">
               <GithubIcon className="dark:text-kawaii-pink size-5 text-neutral-700" />
             </Link>
-            <Link href="https://x.com/pringles_dev">
+            <Link href="https://x.com/vertikasngh">
               <TwitterIcon className="dark:text-kawaii-pink size-5 text-neutral-700" />
             </Link>
           </div>
