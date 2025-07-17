@@ -133,26 +133,9 @@ export default function Header() {
           }`}
         >
           <div className="border-kawaii-pink h-full border-l-2 bg-gradient-to-br from-white via-pink-50/50 to-white shadow-2xl dark:from-black dark:via-pink-950/20 dark:to-black">
-            {/* Menu Header */}
-            <div className="border-kawaii-pink/20 border-b p-6">
-              <Link href="/" className="group flex items-center gap-3" onClick={() => setIsOpen(false)}>
-                <div className="bg-kawaii-pink group-hover:bg-kawaii-pink/20 rounded-full p-2 transition-colors">
-                  <KawaiiHeart
-                    className="text-kawaii-pink transition-transform group-hover:scale-110"
-                    fillColor="none"
-                  />
-                </div>
-                <div>
-                  <h2 className="from-kawaii-pink bg-gradient-to-r to-pink-400 bg-clip-text text-lg font-bold text-transparent">
-                    Pringles Portfolio
-                  </h2>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Welcome back! ✨</p>
-                </div>
-              </Link>
-            </div>
 
             {/* Navigation Links */}
-            <nav className="space-y-2 p-6">
+            <nav className="space-y-2 p-6 mt-15">
               {headerLinks.map((link, index) => (
                 <div
                   key={link.href}
