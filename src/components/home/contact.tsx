@@ -52,7 +52,7 @@ export default function ContactSection() {
                 <MailIcon className="h-8 w-8 text-neutral-800" />
               </div>
 
-              <h3 className="font-family-bubblegum mb-4 text-2xl font-semibold">Let's connect!</h3>
+              <h3 className="font-family-bubblegum mb-4 text-2xl font-semibold">Let&apos;s connect!</h3>
 
               <div className="mx-auto mb-6 max-w-md rounded-2xl p-4">
                 <p className="mb-2 text-sm font-medium text-neutral-800">Send me an email at:</p>
@@ -111,7 +111,7 @@ export default function ContactSection() {
 
             <div className="bg-kawaii-lavender/50 border-kawaii-lavender rounded-2xl border-2 p-6 text-center transition-transform hover:scale-105">
               <div className="text-2xl font-bold">🚀</div>
-              <p className="mt-2 text-sm font-medium text-neutral-800">Let's Build</p>
+              <p className="mt-2 text-sm font-medium text-neutral-800">Let&apos;s Build</p>
               <p className="text-xs text-gray-600">Amazing projects await</p>
             </div>
           </div>

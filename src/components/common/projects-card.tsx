@@ -1,5 +1,5 @@
 import { cn, randomColorGenerator } from '@/lib/utils';
-import { Github, GithubIcon, Heart } from 'lucide-react';
+import { GithubIcon, Heart } from 'lucide-react';
 import Link from 'next/link';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 
