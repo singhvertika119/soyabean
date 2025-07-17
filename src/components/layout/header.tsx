@@ -130,7 +130,7 @@ export default function Header() {
                   <span className="text-kawaii-pink">
                     <KawaiiHeart fillColor="pink" className="inline-block text-pink-300" />
                   </span>{' '}
-                  by Pringles
+                  by Vertika
                 </p>
               </div>
             </div>
