@@ -1,21 +1,79 @@
-'use client';
+"use client"
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-import Wrapper from '../common/Wrapper';
-import AnimatedLink from '../common/animated-link';
-import { KawaiiHeart } from '../../../public/icons/kawaii-heart';
-import { headerLinks } from '@/constants';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { Menu, X } from "lucide-react"
+import Wrapper from "../common/Wrapper"
+import AnimatedLink from "../common/animated-link"
+import { KawaiiHeart } from "../../../public/icons/kawaii-heart"
+import { headerLinks } from "@/constants"
+import { Button } from "@/components/ui/button"
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      // Only apply scroll behavior on small devices (less than 640px)
+      if (window.innerWidth < 640) {
+        if (currentScrollY < lastScrollY || currentScrollY < 10) {
+          // Scrolling up or near top - show header
+          setIsVisible(true)
+        } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          // Scrolling down and past threshold - hide header
+          setIsVisible(false)
+          // Close mobile menu if open
+          setIsOpen(false)
+        }
+      } else {
+        // Always show header on larger screens
+        setIsVisible(true)
+      }
+
+      setLastScrollY(currentScrollY)
+    }
+
+    // Throttle scroll events for better performance
+    let ticking = false
+    const throttledHandleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll()
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener("scroll", throttledHandleScroll, { passive: true })
+
+    // Handle resize to reset visibility on screen size change
+    const handleResize = () => {
+      if (window.innerWidth >= 640) {
+        setIsVisible(true)
+      }
+    }
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("scroll", throttledHandleScroll)
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [lastScrollY])
 
   return (
     <>
-      <header className="border-kawaii-pink sticky top-0 z-50 border-b-2 bg-white/90 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-900/80">
-        <Wrapper className="flex justify-between py-4">
+      <header
+        className={`border-kawaii-pink sticky top-0 z-50 border-b-2 bg-white/90 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-900/80 transition-transform duration-300 ease-in-out ${
+          isVisible ? "translate-y-0" : "-translate-y-full sm:translate-y-0"
+        }`}
+      >
+        <Wrapper className="flex justify-between py-2 sm:py-4">
           <Link href="/" className="group font-family-bubblegum flex items-center gap-2">
             <KawaiiHeart
               fillColor="pink"
@@ -45,12 +103,12 @@ export default function Header() {
             <div className="relative">
               <Menu
                 className={`h-5 w-5 text-pink-300 transition-all duration-300 ${
-                  isOpen ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'
+                  isOpen ? "rotate-90 opacity-0" : "rotate-0 opacity-100"
                 }`}
               />
               <X
                 className={`absolute inset-0 h-5 w-5 text-pink-300 transition-all duration-300 ${
-                  isOpen ? 'rotate-0 opacity-100' : '-rotate-90 opacity-0'
+                  isOpen ? "rotate-0 opacity-100" : "-rotate-90 opacity-0"
                 }`}
               />
             </div>
@@ -62,7 +120,7 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 z-40 transition-all duration-300 sm:hidden ${
-          isOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
+          isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
         {/* Backdrop */}
@@ -71,17 +129,13 @@ export default function Header() {
         {/* Mobile Menu Panel */}
         <div
           className={`absolute top-0 right-0 h-full w-full transform transition-all duration-300 ease-out ${
-            isOpen ? 'translate-x-0' : 'translate-x-full'
+            isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div className="border-kawaii-pink h-full border-l-2 bg-gradient-to-br from-white via-pink-50/50 to-white shadow-2xl dark:from-black dark:via-pink-950/20 dark:to-black">
             {/* Menu Header */}
             <div className="border-kawaii-pink/20 border-b p-6">
-              <Link
-                href="/"
-                className="group flex items-center gap-3"
-                onClick={() => setIsOpen(false)}
-              >
+              <Link href="/" className="group flex items-center gap-3" onClick={() => setIsOpen(false)}>
                 <div className="bg-kawaii-pink group-hover:bg-kawaii-pink/20 rounded-full p-2 transition-colors">
                   <KawaiiHeart
                     className="text-kawaii-pink transition-transform group-hover:scale-110"
@@ -103,7 +157,7 @@ export default function Header() {
                 <div
                   key={link.href}
                   className={`transform transition-all duration-300 ${
-                    isOpen ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
+                    isOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
                   }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
@@ -113,9 +167,7 @@ export default function Header() {
                       className={`hover:bg-kawaii-pink/80 group flex items-center gap-3 rounded-xl border-2 border-pink-200 p-3 transition-all duration-200`}
                     >
                       <div className="bg-kawaii-pink h-2 w-2 rounded-full transition-colors group-hover:bg-pink-400" />
-                      <span className="text-base font-semibold transition-colors">
-                        {link.label}
-                      </span>
+                      <span className="text-base font-semibold transition-colors">{link.label}</span>
                     </AnimatedLink>
                   </div>
                 </div>
@@ -126,10 +178,10 @@ export default function Header() {
             <div className="absolute right-6 bottom-6 left-6">
               <div className="from-kawaii-pink/80 to-kawaii-pink dark:from-kawaii-pink/5 rounded-xl border-2 border-pink-200 bg-gradient-to-r p-4 dark:to-pink-950/20">
                 <p className="text-center text-sm text-gray-600 dark:text-gray-300">
-                  Made with{' '}
+                  Made with{" "}
                   <span className="text-kawaii-pink">
                     <KawaiiHeart fillColor="pink" className="inline-block text-pink-300" />
-                  </span>{' '}
+                  </span>{" "}
                   by Vertika
                 </p>
               </div>
@@ -138,5 +190,5 @@ export default function Header() {
         </div>
       </div>
     </>
-  );
+  )
 }

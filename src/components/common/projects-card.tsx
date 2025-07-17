@@ -100,7 +100,7 @@ export default function ProjectsCard({
 
         <div className="flex items-center gap-1 text-xs">
           {technologies.map((technology) => (
-            <span key={technology} className={`rounded-full px-2 py-1 ${randomColorGenerator()}`}>
+            <span key={technology} className={`rounded-full px-2 py-1 text-nowrap ${randomColorGenerator()}`}>
               {technology}
             </span>
           ))}

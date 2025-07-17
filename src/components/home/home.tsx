@@ -48,7 +48,7 @@ export default function HomeSection() {
             <CaptionImage
               src="/images/muffin1.jpg"
               caption="Muffins <3"
-              className="max-h-44 w-full sm:h-full sm:max-h-60 sm:w-52"
+              className="max-h-42 w-full sm:h-full sm:max-h-60 sm:w-52"
               captionClassName="bg-kawaii-lavender/70"
             />
             <Star size={20} className="text-kawaii-mint mx-auto" />
@@ -57,7 +57,7 @@ export default function HomeSection() {
             <CaptionImage
               src="/images/momo.jpg"
               caption="me & momos"
-              className="max-h-44 w-full sm:h-full sm:max-h-60 sm:w-52"
+              className="max-h-42 w-full sm:h-full sm:max-h-60 sm:w-52"
               captionClassName="bg-kawaii-pink/70"
             />
             <MusicIcon size={20} className="text-kawaii-pink mx-auto" />
