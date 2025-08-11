@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { ThemeProvider } from '@/providers/theme-provider';
+// import { ThemeProvider } from '@/providers/theme-provider';
 import Footer from '@/components/layout/footer';
 import Header from '@/components/layout/header';
 import { Analytics } from '@vercel/analytics/next';
