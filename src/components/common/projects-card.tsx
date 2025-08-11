@@ -64,12 +64,17 @@ export default function ProjectsCard({
             <Link
               href={githubLink}
               className="mx-auto flex w-fit items-center gap-1 rounded-full bg-white px-6 py-2"
+              target="_blank"
             >
               <GithubIcon className="size-4 text-neutral-700 hover:text-neutral-900" fill="black" />
               View on GitHub
             </Link>
             {liveLink && (
-              <Link href={liveLink} className="mx-auto w-fit rounded-full bg-white px-6 py-2">
+              <Link
+                href={liveLink}
+                className="mx-auto w-fit rounded-full bg-white px-6 py-2"
+                target="_blank"
+              >
                 View Live
               </Link>
             )}

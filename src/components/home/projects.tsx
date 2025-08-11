@@ -16,7 +16,7 @@ export default function ProjectsSection() {
       </div>
 
       <div className="mx-auto mt-20 grid w-fit grid-cols-1 gap-6 md:grid-cols-2 lg:mx-28 lg:grid-cols-2">
-        {projects.map((project) => (
+        {[...projects].reverse().map((project) => (
           <ProjectsCard
             key={project.id}
             title={project.title}

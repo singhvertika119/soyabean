@@ -21,17 +21,17 @@ export default function RootLayout({
       <body
         className={`${lacquer.variable} ${quicksand.variable} ${bubblegumSans.variable} font-family-quicksand antialiased dark:bg-neutral-900`}
       >
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange
-        >
-          <Header />
-          {children}
-          <Footer />
-          <Analytics />
-        </ThemeProvider>
+        > */}
+        <Header />
+        {children}
+        <Footer />
+        <Analytics />
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
