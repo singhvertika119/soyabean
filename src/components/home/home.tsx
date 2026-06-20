@@ -12,7 +12,7 @@ export default function HomeSection() {
     >
       <div className="max-w-lg space-y-6">
         <h2 className="border-pink-300/30 bg-pink-500/10 text-pink-500 dark:border-pink-400/20 dark:bg-pink-400/10 dark:text-pink-300 border w-fit rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest">
-          AI/ML Engineer & Backend Developer
+          AI/ML Engineer & Full Stack Developer
         </h2>
         <h1 className="font-family-bubblegum text-center text-5xl font-bold sm:text-left sm:text-6xl leading-tight text-neutral-800 dark:text-neutral-100">
           Hi, I&apos;m <br />
