@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-// import { ThemeProvider } from '@/providers/theme-provider';
+import { ThemeProvider } from '@/providers/theme-provider';
 import Footer from '@/components/layout/footer';
 import Header from '@/components/layout/header';
 import { Analytics } from '@vercel/analytics/next';
@@ -19,19 +19,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${lacquer.variable} ${quicksand.variable} ${bubblegumSans.variable} font-family-quicksand antialiased dark:bg-neutral-900`}
+        className={`${lacquer.variable} ${quicksand.variable} ${bubblegumSans.variable} font-family-quicksand antialiased`}
       >
-        {/* <ThemeProvider
+        <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-        > */}
-        <Header />
-        {children}
-        <Footer />
-        <Analytics />
-        {/* </ThemeProvider> */}
+        >
+          <Header />
+          {children}
+          <Footer />
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,6 +1,5 @@
 import { projects } from '@/constants';
 import ProjectsCard from '@/components/common/projects-card';
-import ComingSoonCard from '../common/coming-soon-card';
 
 export default function ProjectsSection() {
   return (
@@ -9,7 +8,7 @@ export default function ProjectsSection() {
         <h1 className="font-family-bubblegum text-center text-4xl font-semibold">Projects</h1>
         <div className="bg-kawaii-pink h-1 w-20"></div>
 
-        <p className="mt-2 max-w-lg text-center">
+        <p className="mt-2 max-w-lg text-center text-neutral-600 dark:text-neutral-300 text-sm sm:text-base">
           A handful of things I&apos;ve made while figuring stuff out. Some tiny, some bold — all
           built with curiosity.
         </p>
@@ -28,10 +27,8 @@ export default function ProjectsSection() {
             color={project.color}
           />
         ))}
-        <div className="hidden md:block">
-          <ComingSoonCard />
-        </div>
       </div>
     </section>
   );
 }
+

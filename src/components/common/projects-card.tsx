@@ -1,7 +1,6 @@
-import { cn, randomColorGenerator } from '@/lib/utils';
-import { GithubIcon, Heart } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { GithubIcon, ExternalLink, Sparkles, Code2, BrainCircuit } from 'lucide-react';
 import Link from 'next/link';
-import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 
 interface ProjectsCardProps {
   title: string;
@@ -13,26 +12,6 @@ interface ProjectsCardProps {
   color: string;
 }
 
-// Color mapping object
-const colorClasses = {
-  'kawaii-pink': {
-    bg: 'bg-kawaii-pink',
-    text: 'text-kawaii-pink',
-  },
-  'kawaii-mint': {
-    bg: 'bg-kawaii-mint',
-    text: 'text-kawaii-mint',
-  },
-  'kawaii-lavender': {
-    bg: 'bg-kawaii-lavender',
-    text: 'text-kawaii-lavender',
-  },
-  'kawaii-blue': {
-    bg: 'bg-kawaii-blue',
-    text: 'text-kawaii-blue',
-  },
-};
-
 export default function ProjectsCard({
   title,
   description,
@@ -40,77 +19,94 @@ export default function ProjectsCard({
   githubLink,
   liveLink,
   status,
-  color,
 }: ProjectsCardProps) {
-  const colorClass =
-    colorClasses[color as keyof typeof colorClasses] || colorClasses['kawaii-pink'];
+  // Map project status to clean styles
+  const statusStyles = {
+    'completed': 'bg-pink-500/10 text-pink-500 border-pink-200/20 dark:bg-pink-400/10 dark:text-pink-300 dark:border-pink-300/10',
+    'in-progress': 'bg-yellow-500/10 text-yellow-600 border-yellow-200/20 dark:bg-yellow-400/10 dark:text-yellow-300 dark:border-yellow-300/10',
+    'on-hold': 'bg-neutral-500/10 text-neutral-500 border-neutral-200/20 dark:bg-neutral-400/10 dark:text-neutral-400 dark:border-neutral-800',
+  };
+
+  // Dynamically assign project type icons based on key indicators
+  const isML =
+    title.toLowerCase().includes('recommendation') ||
+    title.toLowerCase().includes('churn') ||
+    title.toLowerCase().includes('predictor') ||
+    title.toLowerCase().includes('heart');
+
+  const ProjectIcon = isML ? BrainCircuit : Code2;
 
   return (
-    <div className="border-kawaii-pink group max-w-md rounded-3xl border-3 p-6 shadow-sm transition-transform duration-300 hover:scale-[1.02]">
-      <div
-        className={cn(
-          colorClass.bg,
-          'relative mb-6 flex h-96 w-full flex-col items-center justify-center gap-2 overflow-hidden rounded-3xl p-6 text-center',
-        )}
-      >
-        <div className="mb-4 grid size-16 place-items-center rounded-full bg-white">
-          <Heart className={colorClass.text} />
-        </div>
-        <h2 className="text-lg font-semibold">{title}</h2>
-        <p>{description}</p>
-
-        <div className="group-hover:backdrop-blur-l absolute grid h-full w-full place-items-center gap-2 bg-neutral-900/40 opacity-0 transition-all duration-300 group-hover:opacity-100">
-          <div className="flex translate-y-10 flex-col gap-2 transition-all duration-300 group-hover:translate-y-0">
-            <Link
-              href={githubLink}
-              className="mx-auto flex w-fit items-center gap-1 rounded-full bg-white px-6 py-2"
-              target="_blank"
-            >
-              <GithubIcon className="size-4 text-neutral-700 hover:text-neutral-900" fill="black" />
-              View on GitHub
-            </Link>
-            {liveLink && (
-              <Link
-                href={liveLink}
-                className="mx-auto w-fit rounded-full bg-white px-6 py-2"
-                target="_blank"
-              >
-                View Live
-              </Link>
-            )}
-          </div>
-        </div>
-      </div>
+    <div className="group relative flex flex-col justify-between min-h-[300px] w-full max-w-md rounded-2xl border border-pink-200/20 bg-white p-6 shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 dark:border-neutral-800/80 dark:bg-[#161616]">
       <div>
-        <p className="text-neutral-500">
-          {status === 'completed'
-            ? 'Completed Project'
-            : status === 'in-progress'
-              ? 'Currently Working On'
-              : 'On Hold'}
-        </p>
-        <div className="flex items-center justify-between">
-          <h2 className="mt-1 mb-2 text-lg font-semibold">{title}</h2>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Link href={githubLink}>
-                <GithubIcon className="size-4 text-neutral-700 hover:text-neutral-900" />
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>GitHub</p>
-            </TooltipContent>
-          </Tooltip>
+        {/* Top Header Row */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-pink-500/5 text-pink-500 dark:bg-pink-400/5 dark:text-pink-300">
+            <ProjectIcon className="size-5" />
+          </div>
+          <span
+            className={cn(
+              'text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full border',
+              statusStyles[status],
+            )}
+          >
+            {status}
+          </span>
         </div>
 
-        <div className="flex items-center gap-1 text-xs">
-          {technologies.map((technology) => (
-            <span key={technology} className={`rounded-full px-2 py-1 text-nowrap ${randomColorGenerator()}`}>
-              {technology}
+        {/* Title & Description */}
+        <h3 className="font-family-bubblegum text-lg font-bold mb-2 text-neutral-800 dark:text-neutral-100 group-hover:text-pink-500 dark:group-hover:text-pink-300 transition-colors">
+          {title}
+        </h3>
+        <p className="text-neutral-600 dark:text-neutral-300 text-xs sm:text-sm leading-relaxed mb-4">
+          {description}
+        </p>
+      </div>
+
+      <div>
+        {/* Tech Stack Tags */}
+        <div className="flex flex-wrap gap-1.5 mb-6">
+          {technologies.map((tech) => (
+            <span
+              key={tech}
+              className="rounded-md bg-neutral-100 dark:bg-neutral-800/80 px-2.5 py-1 text-[10px] font-semibold text-neutral-600 dark:text-neutral-300 tracking-wide"
+            >
+              {tech}
             </span>
           ))}
+        </div>
+
+        {/* Action Footer Links */}
+        <div className="flex items-center justify-between pt-4 border-t border-neutral-100 dark:border-neutral-800/60">
+          <Link
+            href={githubLink}
+            className="flex items-center gap-1.5 text-xs font-bold text-neutral-600 dark:text-neutral-300 hover:text-pink-500 dark:hover:text-pink-300 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubIcon className="size-4" />
+            Source Code
+          </Link>
+
+          {liveLink ? (
+            <Link
+              href={liveLink}
+              className="flex items-center gap-1 text-xs font-bold text-neutral-600 dark:text-neutral-300 hover:text-pink-500 dark:hover:text-pink-300 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live Demo
+              <ExternalLink className="size-3.5" />
+            </Link>
+          ) : (
+            <span className="text-[10px] font-semibold text-neutral-400 dark:text-neutral-500 flex items-center gap-1">
+              <Sparkles className="size-3 text-pink-400/70" />
+              Local Model
+            </span>
+          )}
         </div>
       </div>
     </div>
   );
 }
+
