@@ -12,11 +12,11 @@ interface Project {
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'UI to Code Generator',
-    description: 'Turn UI screenshots into React components with Tailwind CSS. Upload an image, call a vision model (Gemini by default), and preview the generated code live in the browser.',
-    technologies: ['Python', 'React', 'Vite', 'Tailwind', 'FastAPI'],
-    githubLink: 'https://github.com/singhvertika119/UI-Code-Generator',
-    liveLink: '',
+    title: 'ORBIT - Multi-Agent Freelance Work Command Center',
+    description: 'A multi-agent AI crews (Llama 3.3 via Groq) to automate contract analysis, client scoping, invoice billing, and payment tracking.',
+    technologies: ['CrewAI', 'React', 'Next.js', 'PostgreSQL', 'FastAPI'],
+    githubLink: 'https://github.com/singhvertika119/The-Orbit',
+    liveLink: 'https://orbit.vertika.in/',
     status: 'completed',
     color: 'kawaii-pink',
   },
