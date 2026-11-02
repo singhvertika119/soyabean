@@ -1,6 +1,7 @@
 import Wrapper from '@/components/common/Wrapper';
 import AboutSection from '@/components/home/about';
 import ContactSection from '@/components/home/contact';
+import ExperienceSection from '@/components/home/experience';
 import HomeSection from '@/components/home/home';
 import ProjectsSection from '@/components/home/projects';
 
@@ -11,6 +12,9 @@ export default function Home() {
         <HomeSection />
       </Wrapper>
       <AboutSection />
+      <Wrapper>
+        <ExperienceSection />
+      </Wrapper>
       <Wrapper>
         <ProjectsSection />
       </Wrapper>

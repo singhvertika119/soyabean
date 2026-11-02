@@ -10,6 +10,11 @@ export const headerLinks = [
   },
 
   {
+    label: 'Experience',
+    href: '#experience',
+  },
+
+  {
     label: 'Projects',
     href: '#projects',
   },
